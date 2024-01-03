@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+	<title>Mini Project Revou - Dwi Citra</title>
+	
+	<!-- Icon part -->
+	<link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">	
+	<!-- CSS part -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+   
+
+	</head>
+
+	<body>
+        <div class="tm-container-fluid">
+        <section class="tm-header tm-flex-center tm-mb-50 tm-bgcolor-1 tm-border-rounded-title">
+		<h1>Welcome to Katik</h1>
+		<p style="text-align: center;">Hai Sobat, Selamat datang di Katik <br>
+		Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>  
+        </section>
+
+       
+        <div class="wrapper">
+            <input class="radio" id="one" name="group" type="radio" checked>
+            <input class="radio" id="two" name="group" type="radio">
+            
+            <div class="tabs">
+            <label class="tab" id="one-tab" for="one">Segitiga</label>
+            <label class="tab" id="two-tab" for="two">Jajar Genjang</label>
+           
+            </div>
+             
+            <div class="panels">
+                <div class="panel" id="one-panel">
+                <h1 style="text-align: center; color: black;">SEGITIGA</h1>
+                <section class="tm-about tm-mb-80 tm-p-50 tm-bgcolor-2 tm-border-rounded">
+                    <div class="tm-about-header tm-flex-center">
+                        <h2><img src="images/triangle.png" alt="triangle"></h2>
+                           
+                        <div>
+                            <p style="color: black; text-align: left;">Rumus Luas Segitiga yaitu: <br>
+                            <em><b>L=1/2 x a x t </b></em><br>
+                            Di mana: <br>
+                            L = Luas <br>
+                            a = Panjang Alas <br>
+                            t = Tinggi
+                            </p>
+                            <p style="color: black; text-align: left;">Rumus Keliling Segitiga yaitu: <br>
+                            <em><b>K= S1 + S2 + S3</b></em> <br>
+                            Di mana: <br>
+                            K = Keliling <br>
+                            S1 = Sisi A <br>
+                            S2 = Sisi B <br>
+                            S3 = Sisi C <br>
+                            </p>
+                        </div> 
+                        
+                    </div>
+                    <div class="tm-about-text">
+                        <p class="tm-mb-40">
+                            
+                            <h4 style="text-align: left;">MENGHITUNG LUAS SEGITIGA</h4>
+                            <table>
+                                <tr>
+                                <input type="text" id="alas" placeholder="Nilai Alas">
+                                <br>
+                                <input type="text" id="tinggi" placeholder="Nilai Tinggi">
+                                <br>
+                                <button class="custom-button-hitung" onclick="hitungluas()">Hitung</button></tr><button class="custom-button-reset" onclick="resetForm()">Reset</button>
+                                <br>
+                                <p id="hasil" style="line-height:20px; color: black; font-weight: bold;"></p>
+                            </tr>
+                        </table>
+                            
+                        </p>
+                        <p class="tm-mb-40">
+                            
+                            <h4 style="text-align: left;">MENGHITUNG KELILING SEGITIGA</h4>
+                            <table>
+                                <tr>
+                                <input type="text" id="sisi1" placeholder="Nilai Sisi A">
+                                <br>
+                                <input type="text" id="sisi2" placeholder="Nilai Sisi B">
+                                <br>
+                                <input type="text" id="sisi3" placeholder="Nilai Sisi C">
+                                <br>
+                                <button onclick="hitungkeliling()" class="custom-button-hitung">Hitung</button></tr><button class="custom-button-reset" onclick="resetFormkl()">Reset</button>
+                                <br>
+                                <p id="hasilkl" style="line-height:20px; color: black; font-weight: bold;"></p>
+                                </tr>
+                            </table>
+                            
+                        </p>
+                    </div>
+                </section>
+                </div>  
+
+
+                <div class="panel" id="two-panel">
+                    <h1 style="text-align: center; color: black;">JAJAR GENJANG</h1>
+                    <section class="tm-about tm-mb-80 tm-p-50 tm-bgcolor-2 tm-border-rounded">
+                        <div class="tm-about-header tm-flex-center">
+                            <h2><img src="images/triangle.png" alt="triangle"></h2>
+                        </div>
+                        <div class="tm-about-text">
+                            <p class="tm-mb-40">
+                                <form>
+                                    <h4 style="color: white; text-align: left;">Menghitung Luas Jajar Genjang</h4>
+                                      <table>
+                                         <tr>
+                                              <td>Alas</td>
+                                              <td>:</td>
+                                              <td><input type="text" id="alas" placeholder="Nilai Alas" name="alas"></td>
+                                         </tr>
+                                         <tr>
+                                              <td>Tinggi</td>
+                                              <td>:</td>
+                                              <td><input type="text" id="tinggi" placeholder="Nilai Tinggi" name="tinggi"></td>
+                                         </tr> 
+                                         <td>Luas</td>
+                                          <td>:</td>
+                                          <td><input type="text"  id="luas" placeholder="Nilai Keliling" name="keliling" disabled="true" size="15"></td>
+                                          <tr>
+                                              <td></td>
+                                              <td><input type="button" value="hitung" onClick="hitungluas()"></td>
+                                         </tr>
+                                      
+                                      </table>
+                                 </form>
+                            </p>
+                            <p class="tm-mb-40"><form>
+                                <h4 style="color: white; text-align: left;">Menghitung Keliling Jajar Genjang</h4>
+                                  <table>
+                                     <tr>
+                                          <td>Sisi A</td>
+                                          <td>:</td>
+                                          <td><input type="text" id="sisi1" placeholder="Nilai Sisi A" name="sisia"></td>
+                                     </tr>
+                                     <tr>
+                                          <td>Sisi B</td>
+                                          <td>:</td>
+                                          <td><input type="text" id="sisi2" placeholder="Nilai Sisi B" name="sisib"></td>
+                                     </tr> 
+                                     <tr>
+                                        <td>Sisi C</td>
+                                        <td>:</td>
+                                        <td><input type="text" id="sisi3" placeholder="Nilai Sisi C" name="sisic"></td>
+                                   </tr>
+                                      <tr>
+                                          <td>Keliling</td>
+                                          <td>:</td>
+                                          <td><input type="text"  id="keliling" placeholder="Nilai Keliling" name="keliling" disabled="true" size="15"></td>
+                                     </tr>
+                                      <tr>
+                                          <td></td>
+                                          <td></td>
+                                          <td><input type="button" value="hitung" onClick="hitungkeliling()"></td>
+                                     </tr>
+                                  </table>
+                                </form></p>
+                        </div>
+                    </section>
+                    </div> 
+            </div>
+
+        </div>
+        </div>
+
+    
+
+	 <!-- Javascript part -->
+     <script type="text/javascript" src="js/script.js"></script> 
+
+	</body>
+    <footer class="tm-footer">
+        <p>Copyright 2023 Dwi Citra</p>
+</footer>
+</html>
