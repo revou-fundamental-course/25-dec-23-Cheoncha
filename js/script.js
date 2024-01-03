@@ -61,4 +61,62 @@ function resetFormkl() {
     document.getElementById('hasilkl').innerHTML = '';
   }
 
+  function hitungluasjg() {
+    
+    var alasjg = document.getElementById('alasjg').value;
+    var tinggijg = document.getElementById('tinggijg').value;
+
+    if (alasjg.trim() === '' || tinggijg.trim() === '') {
+        ;
+        return;
+      }
+
+    if (!isNaN(alasjg) && !isNaN(tinggijg)) {
+        var luasjg =(alasjg * tinggijg) ;
+
+        var resultElement = document.getElementById('hasiljg');
+        resultElement.innerHTML = 
+        "L = a x t<br>" + 
+        "L = " + alasjg + " x " + tinggijg + "<br>" +
+        'Luas: ' + luasjg;
+    } else {
+        alert('Silahkan input angka yang valid untuk alas dan tinggi.');
+    }
+    
+}
+
+function resetFormjg() {
+    document.getElementById('alasjg').value = '';
+    document.getElementById('tinggijg').value = '';
+    document.getElementById('hasiljg').innerHTML = '';
+  }
+
+function hitungkljg(){
+    var sisid = document.getElementById('sisid').value;
+    var sisim = document.getElementById('sisim').value;
+
+    if (sisid.trim() === '' || sisim.trim() === '') {
+        ;
+        return;
+      }
+    
+    if (!isNaN(sisid) && !isNaN(sisim)) {
+        var kelilingjg =(parseInt(sisid)+parseInt(sisim)) * 2 ;
+
+        var resultElement = document.getElementById('hasilkljg');
+        resultElement.innerHTML = 
+        "K = 2 x (AB+BC)<br>" + 
+        "K = 2 x (" + sisid + " + " + sisim + ")<br>" +
+        'Keliling: ' + kelilingjg ;
+       
+    } else {
+        alert('Silahkan input angka yang valid untuk sisi sejajar Jajar genjang.');
+    }
+}
+
+function resetFormkljg() {
+    document.getElementById('sisid').value = '';
+    document.getElementById('sisim').value = '';
+    document.getElementById('hasilkljg').innerHTML = '';
+  }
 

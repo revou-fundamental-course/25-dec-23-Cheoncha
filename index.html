@@ -102,64 +102,56 @@
                     <h1 style="text-align: center; color: black;">JAJAR GENJANG</h1>
                     <section class="tm-about tm-mb-80 tm-p-50 tm-bgcolor-2 tm-border-rounded">
                         <div class="tm-about-header tm-flex-center">
-                            <h2><img src="images/triangle.png" alt="triangle"></h2>
+                            <h2><img src="images/jajargenjang.png" alt="triangle"></h2>
+
+                            <div>
+                                <p style="color: black; text-align: left;">Rumus Luas Jajar Genjang yaitu: <br>
+                                <em><b>L= a x t </b></em><br>
+                                Di mana: <br>
+                                L = Luas <br>
+                                a = Panjang Alas <br>
+                                t = Tinggi
+                                </p>
+                                <p style="color: black; text-align: left;">Rumus Keliling Jajar Genjang yaitu: <br>
+                                <em><b>K= 2 x &#40;AB+BC&#41;</b></em> <br>
+                                Di mana: <br>
+                                K = Keliling <br>
+                                AB = CD = Sisi Datar <br>
+                                BC = AD = Sisi Miring <br>
+                                </p>
+                            </div> 
+
                         </div>
                         <div class="tm-about-text">
                             <p class="tm-mb-40">
-                                <form>
-                                    <h4 style="color: white; text-align: left;">Menghitung Luas Jajar Genjang</h4>
-                                      <table>
-                                         <tr>
-                                              <td>Alas</td>
-                                              <td>:</td>
-                                              <td><input type="text" id="alas" placeholder="Nilai Alas" name="alas"></td>
-                                         </tr>
-                                         <tr>
-                                              <td>Tinggi</td>
-                                              <td>:</td>
-                                              <td><input type="text" id="tinggi" placeholder="Nilai Tinggi" name="tinggi"></td>
-                                         </tr> 
-                                         <td>Luas</td>
-                                          <td>:</td>
-                                          <td><input type="text"  id="luas" placeholder="Nilai Keliling" name="keliling" disabled="true" size="15"></td>
-                                          <tr>
-                                              <td></td>
-                                              <td><input type="button" value="hitung" onClick="hitungluas()"></td>
-                                         </tr>
-                                      
-                                      </table>
-                                 </form>
+                                <h4 style="text-align: left;">MENGHITUNG LUAS JAJAR GENJANG</h4>
+                            <table>
+                                <tr>
+                                <input type="text" id="alasjg" placeholder="Nilai Alas">
+                                <br>
+                                <input type="text" id="tinggijg" placeholder="Nilai Tinggi">
+                                <br>
+                                <button class="custom-button-hitung" onclick="hitungluasjg()">Hitung</button></tr><button class="custom-button-reset" onclick="resetFormjg()">Reset</button>
+                                <br>
+                                <p id="hasiljg" style="line-height:20px; color: black; font-weight: bold;"></p>
+                            </tr>
+                        </table>
                             </p>
-                            <p class="tm-mb-40"><form>
-                                <h4 style="color: white; text-align: left;">Menghitung Keliling Jajar Genjang</h4>
-                                  <table>
-                                     <tr>
-                                          <td>Sisi A</td>
-                                          <td>:</td>
-                                          <td><input type="text" id="sisi1" placeholder="Nilai Sisi A" name="sisia"></td>
-                                     </tr>
-                                     <tr>
-                                          <td>Sisi B</td>
-                                          <td>:</td>
-                                          <td><input type="text" id="sisi2" placeholder="Nilai Sisi B" name="sisib"></td>
-                                     </tr> 
-                                     <tr>
-                                        <td>Sisi C</td>
-                                        <td>:</td>
-                                        <td><input type="text" id="sisi3" placeholder="Nilai Sisi C" name="sisic"></td>
-                                   </tr>
-                                      <tr>
-                                          <td>Keliling</td>
-                                          <td>:</td>
-                                          <td><input type="text"  id="keliling" placeholder="Nilai Keliling" name="keliling" disabled="true" size="15"></td>
-                                     </tr>
-                                      <tr>
-                                          <td></td>
-                                          <td></td>
-                                          <td><input type="button" value="hitung" onClick="hitungkeliling()"></td>
-                                     </tr>
-                                  </table>
-                                </form></p>
+                            <p class="tm-mb-40">
+                                <h4 style="text-align: left;">MENGHITUNG KELILING JAJAR GENJANG</h4>
+                                <table>
+                                    <tr>
+                                    <input type="text" id="sisid" placeholder="Nilai AB / CD">
+                                    <br>
+                                    <input type="text" id="sisim" placeholder="Nilai BC / AD">
+                                    <br>
+                                    <button class="custom-button-hitung" onclick="hitungkljg()">Hitung</button></tr><button class="custom-button-reset" onclick="resetFormkljg()">Reset</button>
+                                    <br>
+                                    <p id="hasilkljg" style="line-height:20px; color: black; font-weight: bold;"></p>
+                                </tr>
+                            </table>
+                            
+                            </p>
                         </div>
                     </section>
                     </div> 
